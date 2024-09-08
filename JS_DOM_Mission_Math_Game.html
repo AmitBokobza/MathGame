@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Game</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="gameZone">
+        <div class="top">
+            <h1>משחק ללימודי חשבון</h1>
+        </div>
+        <div class="select">
+            <div class="select1">
+                <label for="numberRange">בחר כמות מספרים:</label>
+                <select name="numberRange" id="numberRange" onchange="generateNum()">
+                    <option value="1-10">1-10</option>
+                    <option value="1-100">1-100</option>
+                    <option value="1-1000">1-1000</option>
+                </select>
+            </div>
+            <div class="select2">
+                <label for="operator">בחר אופרטור:</label>
+                <select name="operator" id="operator" onchange="generateNum()">
+                    <option value="+">חיבור +</option>
+                    <option value="-">חיסור -</option>
+                    <option value="*">כפל *</option>
+                    <option value="/">חילוק /</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="mid" id="mid">
+            <div id="exArea"></div>
+            <p>=</p>
+            <input type="number" id="ans">
+            <button onclick="exc1()">בדוק</button>
+        </div>
+        <div id="rvw"></div>
+        <div class="bottom">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>תרגיל</th>
+                        <th>תשובה נכונה</th>
+                        <th>תשובה שנענתה</th>
+                        <th>נקודות</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
