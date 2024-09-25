@@ -1,6 +1,7 @@
 const ex = document.getElementById("exArea");
 let num1, num2, result;
 
+// function to generate a equation and take it in a variable as eval
 function generateNum() {
     const numberRange = document.getElementById("numberRange").value;
     const op = document.getElementById("operator").value;
@@ -23,7 +24,7 @@ function generateNum() {
     result = eval(eq);
 }
 
-
+//takes the user answer and checks if it matches with the equation and adds to table
 function exc1() {
     const userAns = Number(document.getElementById("ans").value);
 
